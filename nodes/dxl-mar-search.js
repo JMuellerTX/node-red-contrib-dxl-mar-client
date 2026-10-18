@@ -238,7 +238,7 @@ module.exports = function (RED) {
           // Continuation of a previous search. Get the next page of results
           // and send them along to the output nodes.
           var resultsContext = new ResultsContext(marClient,
-            msg.searchId, msg.resultCount, msg.errorCount, msg.errorCount,
+            msg.searchId, msg.resultCount, msg.errorCount,
             msg.hostCount, msg.subscribedHostCount)
           getResults(node, nodeConfig, msg, resultsContext)
         } else if (projections) {
